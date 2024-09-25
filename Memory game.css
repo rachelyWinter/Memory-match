@@ -1,0 +1,347 @@
+* {
+  font-family: 'Rubik';
+}
+body{
+        background-color: darkgray;
+        margin: 0%;
+        padding: 0%;
+        border: 0%;
+        font-family: 'Rubik', sans-serif; 
+    }
+    header{
+        background-color: black;
+       color: aliceblue;
+       border: 0%;
+       padding: 0%;
+       margin: 0%;
+       height: 12vh;
+       grid-area: header;
+       
+    }
+ 
+    h1{
+        border: 0%;
+        padding-top: 1%;
+        margin: 0%;  
+        text-align: center;
+        
+    }
+   
+    nav{
+        
+       margin: 0%;
+       padding: 0%;
+        list-style-type: none;
+        background-color:rgb(0, 0, 0);
+        /* font-size: 1.0vw; */
+        color: aliceblue;
+        
+        text-align: right;
+        /* grid-area: nav; */
+        
+    }
+    button{
+       padding-left: 15px ;
+       padding-right: 15px ;
+       align-items: right;
+       background-color:rgb(0, 0, 0);
+       color: aliceblue;
+       border: 10px;
+       border-color: aliceblue;
+       font-size: 25px;
+       border-bottom: 3px solid rgb(220, 3, 129);
+       border-top-left-radius: 15px;
+       border-top-right-radius: 15px;
+    }
+    button:hover{
+        background-color:rgb(220, 3, 129);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    button:focus{
+      background-color:rgb(220, 3, 129);
+    }
+    
+    #main{
+        height: 40vw;
+        border: 0%;
+        padding: 0px 0px 0px 0px;
+        margin: 0%;
+        grid-area: main;
+        /* align-content: center;
+        justify-content: center; */
+        justify-content: center;
+        transition: margin-left .5s;
+    }
+    
+  
+   #includ{
+    justify-content: center;
+    position: relative;
+    /* left:30vw ; */
+    top:3vw;
+   }
+   /*עיצוב  לכרטיס*/
+   #c{
+     border-radius: 25px;
+    border: solid ;
+    border-color: black;
+    background-image:url(./מאשה\ והדוב-אנגלית\ קריסטמס\ \,שלג_Sub_01.00_00_16_24.Still002.png);
+   background-repeat: no-repeat;
+    background-size: 150%;
+    transition: transform 0.4s;
+  transform-style: preserve-3d; 
+}
+
+/*עיצוב לסרגל הזמן*/
+#rulerTime {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #line {
+   
+    width: 0%;
+    height: 30px;
+    background-color: rgb(128, 0, 60);
+    color:aliceblue;
+  }
+  
+  #p{
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: right;
+    padding-right: 10px;
+    font-size:20px;
+    position: fixed;
+    right: 0;
+  }
+  /*עיצוב של המספר של השניות בסוף המשחק*/
+  #p-end{
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: right;
+    padding-right: 10px;
+    font-size:20px; 
+    position: fixed;
+    right: 0;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+#victory{
+    text-align: center;
+    font-size: 35px;
+    }
+/*עיצוב של ההודעה לאחר המשחק*/
+.winer {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding-top: 0;
+    border: 1px solid #888;
+    width: 50%;
+    align-self: center;
+    align-items:center ;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+    
+  }
+  .winer-body p {padding: 2px 25px;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+  .winer-header {
+    padding: 2px 5px;
+    background-color: rgb(62, 0, 29);
+    color: white;
+    text-align: center;
+    height: 50px;
+  }
+  .winer-footer {
+    text-align: center;
+    padding: 2px 5px;
+    background-color: rgb(62, 0, 29);
+    color: white;
+    height: 50px;
+  }
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight:lighter ;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  @keyframes example {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+    from {opacity: 100;}
+    to {opacity: 0;}
+  }
+.btn{
+  background-color: rgb(0, 0, 0);
+  border-radius: 30px;
+}
+
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a,th {
+  
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.sidenav a,td:hover {
+  color: #f1f1f1;
+}
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenav td {
+  padding: 10px 10px 10px 40px;
+  transition: 0.3s;
+}
+table{
+  /* display:inline-flex;  */
+  color: rgb(210, 55, 107);
+   /* padding-left: 450px;
+   padding-right: 400px;
+    font-size: 30px; display: flexbox; */
+     text-align: center;
+    -ms-flex-item-align: center;
+    transition: 0.3s;
+}
+tr:nth-child(even) {
+  background-color: rgb(244, 174, 206);
+}
+td:nth-child(even),td:nth-child(even) {
+  background-color: rgb(195, 195, 195)
+}
+#cc{
+  padding: 10px 18px 10px 40px;
+  font-size: 30px;
+  color: #f1f1f1;
+  font-weight: lighter;
+  border: 2px solid #f1f1f1;
+  transition: 0.3s;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#hisBtn{
+  border-radius: 0%;
+  }
+#hisBtn:hover{
+border-radius: 0%;
+background-color: rgb(0, 0, 0);
+}
+
+
+/* The Overlay (background) */
+.overlay {
+  
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 15%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a,p {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #adadad;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+  font-weight: normal;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a,p :hover, .overlay a,p:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+#horaot{
+  background-color:  rgb(220, 3, 129);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 3px solid rgb(220, 3, 129);
+}
+
+#horaot:hover {
+  background-color:  rgb(0, 0, 0);
+}

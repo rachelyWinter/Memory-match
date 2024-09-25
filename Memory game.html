@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Memory game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Memory game</title>
+</head>
+<body >
+    <audio id="audioEasy" src="./sounds/1.mp3"></audio>
+    <audio id="audioHard" src="./sounds/SA.mp3"></audio>
+    <audio id="audioMidi" src="./sounds/Arpent.mp3"></audio>
+    <audio id="onclick" src="./sounds/CHIME.WAV"></audio>
+    <audio id="pair" src="./sounds/pair.WAV"></audio>
+    <audio id="overgame" src="./sounds/AK069.WAV"></audio>
+    <audio id="winery" src="./sounds/×-×¨×-× ×¡ ×§×¦×-×- ×-×-×- ×-×-×-×-×-×-!! 2012.mp3"></audio>
+    
+
+<!-- <header><h1 id="title game">Memory game</h1></header> -->
+<main id="main">
+ <nav> 
+  <h1 id="title game">Memory game</h1> 
+  <button id="horaot" onclick="openT()">הוראות משחק</button>
+  <button  onclick="hardlevel()">קשה </button>
+ <button  onclick="mediumlevel()"> בינוני</button> 
+ <button   onclick="Easylevel()"> קל </button>
+ 
+</nav> 
+
+  <div id="rulerTime">
+    <div id="line"></div>
+  </div>
+  <div id="p">0%</div>
+  <div id="p-end">0%</div>
+
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+ <table id="tbl">
+  <tr>
+    <td >זמן</th>
+    <td >מצב</th>
+    <td >רמה</th>
+    </tr>
+  <tr>
+    <td  id="0" ></th>
+    <td  id="1" ></th>
+    <td  id="2"></th>
+    </tr>
+      <tr>
+    <td  id="3" ></th>
+    <td  id="4" ></th>
+    <td  id="5"></th>
+  </tr>
+  <tr  >
+    <td  id="6" ></th>
+      <td  id="7" ></th>
+      <td  id="8"></th>
+      </tr> 
+       <tr>
+      <td  id="9" ></th>
+      <td  id="10" ></th>
+      <td  id="11"></th>
+  </tr>
+  <tr >
+    <td  id="12" ></th>
+      <td  id="13" ></th>
+      <td  id="14"></th>
+   </tr>
+        <tr>
+      <td  id="15" ></th>
+      <td  id="16" ></th>
+      <td  id="17"></th>
+     
+  </tr>
+  <tr  >
+    <td  id="18" ></th>
+      <td  id="19" ></th>
+      <td  id="20"></th>
+      </tr> 
+      <tr>
+      <td  id="21" ></th>
+      <td  id="22" ></th>
+      <td  id="23"></th>
+  </tr>
+  <tr  >
+    <td  id="24" ></th>
+      <td  id="25" ></th>
+      <td  id="26"></th>
+      </tr> 
+       <tr>
+      <td  id="27" ></th>
+      <td  id="28" ></th>
+      <td  id="29"></th>
+  </tr>
+  <tr  >
+    <td  id="30" ></th>
+      <td  id="31" ></th>
+      <td  id="32"></th>
+       </tr> 
+       <tr>
+      <td  id="33" ></th>
+      <td  id="34" ></th>
+      <td  id="35"></th>
+  </tr>
+  <tr >
+    <td  id="36" ></th>
+      <td  id="37" ></th>
+      <td  id="38"></th>
+      </tr>  <tr>
+      <td  id="40" ></th>
+      <td  id="41" ></th>
+      <td  id="42"></th>
+  </tr>
+  <tr  >
+    <td  id="43" ></th>
+      <td  id="44" ></th>
+      <td  id="45"></th>
+      </tr> 
+      <tr>
+      <td  id="46" ></th>
+      <td  id="47" ></th>
+      <td  id="48"></th>
+  </tr>
+ </table>
+
+  <div id="cc">אין היסטוריה</div>
+</div>
+
+<button onclick="openNav()" id="hisBtn">היסטוריה</button>
+
+ <div class="winer" id="w">
+    <div class="winer-header">
+      <span class="close" id="clos">x</span>
+      <h2 id="titleNote">you did it!!!!</h2>
+    </div>
+    <div class="winer-body">
+      <p id="text">סיימת בהצלחה את משחק הזיכרון!!!</p>
+      <p id="second"></p>
+      <div>
+      <button id="Game-Over1" class="btn" >קשה </button>
+      <button id="Game-Over2" class="btn"> בינוני</button> 
+      <button id="Game-Over3"  class="btn"> קל </button>
+    </div>
+    </div>
+    <div class="winer-footer">
+      <h3 id="titleNote2">כל הכבוד!!!</h3>
+    </div>
+  </div>
+ <div id="myNav" class="overlay">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeT()">&times;</a>
+   <div class="overlay-content">
+    <p > :הוראות משחק</p>
+    <p>בשלב ראשון ביחרו רמה בה אתם מעונינים לשחק</p>
+    <p >כעת עליכם למצוא זוגות של כרטיסים במינימום זמן אפשרי</p>
+    <p >שימו לב! זמנכם מוגבל! אם תחרגו מהזמן המשחק יגמר בכישלון</p>
+    <p > בכל רגע נתון תוכלו להיכנס ל"היסטוריה" ולראות     </p>
+    <p> את היסטורית המשחקים שלכם ומה השיא שלכם</p>
+    <p >!בהנאה</p>
+  </div>
+</div>
+<script src="./Memory game.js"></script>
+
+</main>
+
+<!-- <footer id="footer">כל הזכויות שמורות  </footer> -->
+</body>
+</html>
