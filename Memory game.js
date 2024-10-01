@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("p-end").style.display = "none";
   document.getElementById("w").style.display = "none";
+  document.getElementById("p").style.display = "none";
+  document.getElementById("winer").style.display = "none";
+
 });
 const divinclud=document.createElement("div")
 divinclud.id="includ"
@@ -247,7 +250,7 @@ function putpic(card,gif,z,cards,randompic,level)
      if(SecondCard.src==FirstCard.src){
       coupls++;
      setTimeout(()=>{hideCard(FirstCard,SecondCard,z,cards,randompic)},750)//פונקציה ש"תחביא" את זוג הכטיסים
-     if(coupls!=0&&coupls==z/2){//אם נמצאו כל הזזוגות
+     if(coupls!=0 && coupls == z/2){//אם נמצאו כל הזזוגות
       setTimeout(()=>{win(level);},550)//פונקציה שמקפיצה הודעת ניצחון
       clearInterval(timing);//ניקוי של הטיימר
       clearInterval(b);
