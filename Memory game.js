@@ -247,8 +247,8 @@ function putpic(card,gif,z,cards,randompic,level)
      if(SecondCard.src==FirstCard.src){
       coupls++;
      setTimeout(()=>{hideCard(FirstCard,SecondCard,z,cards,randompic)},750)//פונקציה ש"תחביא" את זוג הכטיסים
-     if(coupls==z/2){//אם נמצאו כל הזזוגות
-      setTimeout(()=>{win(level);},550)//פונקציה שמקפיצה הודעת עיצחון
+     if(coupls!=0&&coupls==z/2){//אם נמצאו כל הזזוגות
+      setTimeout(()=>{win(level);},550)//פונקציה שמקפיצה הודעת ניצחון
       clearInterval(timing);//ניקוי של הטיימר
       clearInterval(b);
       }
